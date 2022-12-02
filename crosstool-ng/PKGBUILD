@@ -1,7 +1,7 @@
 # Maintainer: Martell Malone <martellmalone@gmail.com>
 
 pkgname="crosstool-ng"
-pkgver=1.24.0
+pkgver=1.25.0
 pkgrel=1
 pkgdesc="A cross-platform open-source toolchain system"
 arch=('i686' 'x86_64')
@@ -9,14 +9,14 @@ url="http://www.crosstool-ng.org/"
 license=("MIT")
 makedepends=("autoconf" "automake-wrapper" "binutils" "bison"
              "flex" "gettext-devel" "git" "gcc" "gperf"
-             "patch" "ncurses-devel"
+             "patch" "ncurses-devel" 'unzip' 'help2man'
              "tar" "texinfo" "wget" "xz" 'autotools')
 depends=("ncurses" "libintl")
 options=('staticlibs' 'strip')
 source=("http://crosstool-ng.org/download/crosstool-ng/${pkgname}-${pkgver}.tar.xz"
         "0001-Modify-config-to-support-correct-Mingw64-Triplet-Nam.patch")
-sha256sums=('804ced838ea7fe3fac1e82f0061269de940c82b05d0de672e7d424af98f22d2d'
-            '63e39da13cb078d118a03ee492041067da58e531d948a37630349887417496d5')
+sha256sums=('68162f342243cd4189ed7c1f4e3bb1302caa3f2cbbf8331879bd01fe06c60cd3'
+            'eb59b9ecb714532c3cef75f668c1d4fce55a38f4f299a1e97d43b3926156f32f')
 noextract=(${pkgname}-${pkgver}.tar.xz)
 
 prepare() {
